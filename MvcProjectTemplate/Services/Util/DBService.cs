@@ -13,8 +13,6 @@ namespace Util.DB
           {
                     private int defaultTimeout = 300;//預設timeout時間
 
-                    string dbConString = "";
-
                     #region ConnectionString 
                     public string GetMyDBConString()
                     {
