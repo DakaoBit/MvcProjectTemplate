@@ -6,6 +6,9 @@ using System.Web;
 
 namespace  Util.Config
 {
+          /// <summary>
+          /// Config Service
+          /// </summary>
           public class ConfigService
           {
                     #region DBConnectionString

@@ -9,6 +9,9 @@ using System.Web;
 
 namespace Util.DB
 {
+          /// <summary>
+          /// Call DB Service
+          /// </summary>
           public class DBService
           {
                     private int defaultTimeout = 300;//預設timeout時間
@@ -161,7 +164,7 @@ namespace Util.DB
                     }
 
                     /// <summary>
-                    /// Mysql單筆同步查詢
+                    /// Mysql 取第一筆同步查詢
                     /// </summary>
                     /// <param name="sql">查詢字串</param>
                     /// <param name="parameters">動態參數設置</param>
@@ -178,7 +181,7 @@ namespace Util.DB
                     }
 
                     /// <summary>
-                    /// Mysql單筆同步查詢
+                    /// Mysql 取第一筆同步查詢
                     /// </summary>
                     /// <typeparam name="T"></typeparam>
                     /// <param name="sql"></param>
@@ -197,7 +200,7 @@ namespace Util.DB
                     }
 
                     /// <summary>
-                    /// Mysql單筆異步查詢
+                    /// Mysql 取第一筆異步查詢
                     /// </summary>
                     /// <param name="sql">查詢字串</param>
                     /// <param name="parameters">動態參數設置</param>
@@ -214,7 +217,7 @@ namespace Util.DB
                     }
 
                     /// <summary>
-                    /// Mysql單筆異步查詢
+                    /// Mysql 取第一筆異步查詢
                     /// </summary>
                     /// <typeparam name="T"></typeparam>
                     /// <param name="sql"></param>
@@ -338,7 +341,7 @@ namespace Util.DB
                     }
 
                     /// <summary>
-                    ///  Mysql 單筆同步查詢: return a single object
+                    ///  Mysql 取單一筆同步查詢: return a single object
                     /// </summary>
                     /// <param name="sql"></param>
                     /// <param name="parameters"></param>
@@ -364,7 +367,7 @@ namespace Util.DB
                     }
 
                     /// <summary>
-                    /// Mysql 單筆同步查詢
+                    /// Mysql 取單一筆同步查詢
                     /// </summary>
                     /// <typeparam name="T"></typeparam>
                     /// <param name="sql"></param>

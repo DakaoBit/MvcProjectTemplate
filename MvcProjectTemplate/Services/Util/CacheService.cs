@@ -6,6 +6,9 @@ using System.Web;
 
 namespace  Util.Cache
 {
+          /// <summary>
+          /// Cache Service
+          /// </summary>
           public class CacheService
           {
                     private IMemoryCache _memoryCache;

@@ -11,6 +11,9 @@ using System.Web;
 
 namespace Util.Http
 {
+          /// <summary>
+          /// Http Service
+          /// </summary>
           public class HttpService
           {
                     /// <summary>
