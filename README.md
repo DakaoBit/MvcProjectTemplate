@@ -6,6 +6,7 @@ ASP.NET MVC 5  Project Template
 2. utils.js
 
 ## Static Helper
+1. UtilsHelper.cs
 
 ## Backend Utils
 1. CacheService.cs
