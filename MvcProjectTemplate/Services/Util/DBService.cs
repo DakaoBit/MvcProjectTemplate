@@ -23,6 +23,11 @@ namespace Util.DB
                     }
                     #endregion
 
+                    /// <summary>
+                    /// Get DB ConnectionString
+                    /// </summary>
+                    /// <param name="databasename"></param>
+                    /// <returns></returns>
                     public string GetDefaultConnectionString(string databasename = "")
                     {
                               string ConnectionString = "";
@@ -174,6 +179,14 @@ namespace Util.DB
                               }
                     }
 
+                    /// <summary>
+                    /// Mysql單筆同步查詢
+                    /// </summary>
+                    /// <typeparam name="T"></typeparam>
+                    /// <param name="sql"></param>
+                    /// <param name="parameters"></param>
+                    /// <param name="ConStr"></param>
+                    /// <returns></returns>
                     public T MysqlQueryFirstOrDefault<T>(string sql, DynamicParameters parameters, string ConStr = "")
                     {
                               using(var conn = new MySqlConnection(GetDefaultConnectionString(ConStr)))
@@ -202,6 +215,14 @@ namespace Util.DB
                               }
                     }
 
+                    /// <summary>
+                    /// Mysql單筆異步查詢
+                    /// </summary>
+                    /// <typeparam name="T"></typeparam>
+                    /// <param name="sql"></param>
+                    /// <param name="parameters"></param>
+                    /// <param name="ConStr"></param>
+                    /// <returns></returns>
                     public async Task<T> MysqlQueryFirstOrDefaultAsync<T>(string sql, DynamicParameters parameters, string ConStr = "")
                     {
                               using(var conn = new MySqlConnection(GetDefaultConnectionString(ConStr)))
@@ -214,7 +235,7 @@ namespace Util.DB
                     }
 
                     /// <summary>
-                    /// Mysql同步查詢
+                    /// Mysql多筆同步查詢
                     /// </summary>
                     /// <param name="sql">查詢字串</param>
                     /// <param name="parameters">動態參數設置</param>
@@ -234,7 +255,14 @@ namespace Util.DB
                               }
                     }
 
-
+                    /// <summary>
+                    /// Mysql多筆同步查詢
+                    /// </summary>
+                    /// <typeparam name="T"></typeparam>
+                    /// <param name="sql"></param>
+                    /// <param name="parameters"></param>
+                    /// <param name="ConStr"></param>
+                    /// <returns></returns>
 
                     public IEnumerable<T> MysqlQuery<T>(string sql, DynamicParameters parameters, string ConStr = "")
                     {
@@ -252,7 +280,7 @@ namespace Util.DB
                     }
 
                     /// <summary>
-                    /// Mysql異步查詢
+                    /// Mysql多筆異步查詢
                     /// </summary>
                     /// <param name="sql">查詢字串</param>
                     /// <param name="parameters">動態參數設置</param>
@@ -280,6 +308,14 @@ namespace Util.DB
                               }
                     }
 
+                    /// <summary>
+                    /// Mysql多筆異步查詢
+                    /// </summary>
+                    /// <typeparam name="T"></typeparam>
+                    /// <param name="sql"></param>
+                    /// <param name="parameters"></param>
+                    /// <param name="ConStr"></param>
+                    /// <returns></returns>
                     public async Task<IEnumerable<T>> MysqlQueryAsync<T>(string sql, DynamicParameters parameters, string ConStr = "")
                     {
                               #region example :
@@ -329,7 +365,14 @@ namespace Util.DB
                               }
                     }
 
-
+                    /// <summary>
+                    /// Mysql 單筆同步查詢
+                    /// </summary>
+                    /// <typeparam name="T"></typeparam>
+                    /// <param name="sql"></param>
+                    /// <param name="parameters"></param>
+                    /// <param name="ConStr"></param>
+                    /// <returns></returns>
                     public T MysqlQuerySingle<T>(string sql, DynamicParameters parameters, string ConStr = "")
                     {
                               try
@@ -376,6 +419,14 @@ namespace Util.DB
                               }
                     }
 
+                    /// <summary>
+                    /// Mysql 單筆異步查詢: return a single object
+                    /// </summary>
+                    /// <typeparam name="T"></typeparam>
+                    /// <param name="sql"></param>
+                    /// <param name="parameters"></param>
+                    /// <param name="ConStr"></param>
+                    /// <returns></returns>
                     public async Task<T> MysqlQuerySingleAsync<T>(string sql, DynamicParameters parameters, string ConStr = "")
                     {
                               try
@@ -523,6 +574,13 @@ namespace Util.DB
                               }
                     }
 
+                    /// <summary>
+                    /// Mysql StoredProcedure Async
+                    /// </summary>
+                    /// <param name="sql"></param>
+                    /// <param name="parameters"></param>
+                    /// <param name="ConStr"></param>
+                    /// <returns></returns>
                     public async Task<SqlReturnMsg> StoredProcedureAsync(string sql, DynamicParameters parameters, string ConStr = "")
                     {
                               try
@@ -565,7 +623,9 @@ namespace Util.DB
           }
 }
 
-
+/// <summary>
+///  SqlReturnMsg - contain table and result info
+/// </summary>
 public class SqlReturnMsg
 {
           public DataTable ResultTable;
