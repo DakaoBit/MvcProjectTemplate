@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "bfbe1fe5-7fa5-4c5a-ac4a-32a60ef0097b",
+		"name": "MvcProjectTemplate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23609290"
+	},
+	"item": [
+		{
+			"name": "Get All Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44351/api/Book/Get",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44351",
+					"path": [
+						"api",
+						"Book",
+						"Get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  a Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44351/api/Book/Get?id=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44351",
+					"path": [
+						"api",
+						"Book",
+						"Get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 3,\r\n    \"CategoryId\":1,\r\n    \"ISBN\":\"003\",\r\n    \"Author\":\"J.K.羅琳\",\r\n    \"Title\":\"哈利波特(8)：被詛咒的孩子\",\r\n    \"Description\":\".....\",\r\n    \"CreateUser\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44351/api/Book/Post",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44351",
+					"path": [
+						"api",
+						"Book",
+						"Post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 3,\r\n    \"CategoryId\":1,\r\n    \"ISBN\":\"003\",\r\n    \"Author\":\"J.K.羅琳\",\r\n    \"Title\":\"哈利波特(8)：被詛咒的孩子\",\r\n    \"Description\":\"edit\",\r\n    \"UpdateUser\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44351/api/Book/Post",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44351",
+					"path": [
+						"api",
+						"Book",
+						"Post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-length": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://localhost:44351/api/Book/Delete/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44351",
+					"path": [
+						"api",
+						"Book",
+						"Delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
