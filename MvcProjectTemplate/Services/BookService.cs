@@ -109,8 +109,13 @@ namespace MvcProjectTemplate.Services
                                                             Description = @Description,  UpdateTime = @UpdateTime,UpdateUser = @UpdateUser 
                                                             WHERE Id = @Id ;";
                               DynamicParameters parameters = new DynamicParameters();
+                              parameters.Add("CategoryId", book.CategoryId);
+                              parameters.Add("ISBN", book.ISBN);
+                              parameters.Add("Author", book.Author);
                               parameters.Add("Title", book.Title);
+                              parameters.Add("Description", book.Description);
                               parameters.Add("UpdateTime", DateTime.Now);
+                              parameters.Add("UpdateUser", book.UpdateUser);
                               parameters.Add("Id", book.Id);
                               return await _dbService.MysqlExecuteAsync(sql, parameters);
                     }
@@ -122,7 +127,7 @@ namespace MvcProjectTemplate.Services
                     /// <returns></returns>
                     public async Task<bool> DeleteBookAsync(int id)
                     {
-                              string sql = @"DELETE Book WHERE Id = @Id";
+                              string sql = @"DELETE From Book WHERE Id = @Id";
                                         
                               DynamicParameters parameters = new DynamicParameters();
                               parameters.Add("Id", id);
