@@ -8,4 +8,4 @@
   `CreateUser` int NOT NULL COMMENT 'User Id',
   `UpdateUser` int DEFAULT NULL COMMENT 'User Id',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='分類';
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='分類';

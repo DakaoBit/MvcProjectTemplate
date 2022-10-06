@@ -13,4 +13,4 @@ CREATE TABLE `book` (
   PRIMARY KEY (`Id`),
   KEY `CategoryId` (`CategoryId`),
   CONSTRAINT `book_ibfk_1` FOREIGN KEY (`CategoryId`) REFERENCES `category` (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='書';
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='書';
